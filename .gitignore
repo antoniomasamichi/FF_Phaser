@@ -7,3 +7,5 @@ obj/*
 *.sln
 *.suo
 .idea/*
+*.png
+deploy/*

@@ -9,7 +9,8 @@ module.exports = function (grunt) {
         connect: {
             server: {
                 options: {
-                    port: 8080,
+                    port: process.env.PORT,
+                    hostname: process.env.IP,
                     base: './deploy'
                 }
             }
@@ -33,6 +34,6 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.registerTask('default', ['concat', 'connect', 'open', 'watch']);
+    grunt.registerTask('default', ['concat', 'connect', 'watch']);
 
 }
